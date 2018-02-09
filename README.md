@@ -49,13 +49,8 @@ ansible-galaxy install -r requirements.yml
 
 ### (SKELETON) installation
 
+Special one-liner to fast skeleton setup
+
 ```bash
-git clone git@github.com:rakshazi/ansible-skeleton.git ansible
-cd ansible
-rm -rf .git
-git init
-git add --all
-git add -f tmp/.gitkeep
-git commit -m "Init skeleton"
-echo -e "\033[0;32m[ansible]\033[0m Skeleton successfuly initialized, you should add your own origin repo with following command: \033[01;37mgit remote add origin <your origin url>\033[0m"
+git clone -q https://github.com/rakshazi/ansible-skeleton.git ansible && cd ansible && rm -rf .git && git init -q && git add --all && git add -f tmp/.gitkeep && git commit -q -m "Init skeleton" && echo -e "\033[0;32m[ansible]\033[0m Skeleton successfuly initialized, you should add your own origin repo with following command: \033[01;37mgit remote add origin <your origin url>\033[0m"
 ```
