@@ -1,0 +1,6 @@
+---
+- hosts: all
+  pre_tasks:
+    - debug: msg=test
+  #roles:
+    #- ...

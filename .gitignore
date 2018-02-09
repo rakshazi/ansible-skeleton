@@ -1,0 +1,5 @@
+galaxy
+*.retry
+*.pem
+tmp
+!tmp/.gitkeep
