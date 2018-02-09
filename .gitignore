@@ -1,5 +1,4 @@
 galaxy
-*.retry
-*.pem
+.vault
 tmp
 !tmp/.gitkeep
