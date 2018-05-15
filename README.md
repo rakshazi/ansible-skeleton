@@ -25,6 +25,8 @@ Ansible skeleton for new projects
 ```
 .
 ├── ansible.cfg       ## Ansible base configuration
+├── group_vars        ## Group variables
+├── host_vars         ## Host variables
 ├── inventories       ## Inventory files
 │   └── default       ## Default inventory file
 ├── playbooks         ## Playbooks
