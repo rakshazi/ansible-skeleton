@@ -1,4 +1,4 @@
-galaxy
 .vault
 tmp
 !tmp/.gitkeep
+*.pyc

@@ -1,6 +1,7 @@
 ---
-- hosts: all
+- hosts: localhost
   pre_tasks:
-    - debug: msg=test
+    - name: Setup me
+      setup:
   #roles:
     #- ...
