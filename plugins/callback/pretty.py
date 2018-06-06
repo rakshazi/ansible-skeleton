@@ -29,6 +29,19 @@ class CallbackModule(CallbackModule_unixy):  # pylint: disable=too-few-public-me
             'failed': '✘',
         }.get(msg, '?')
 
+    def v2_playbook_on_play_start(self, play):
+        pass
+
+    def v2_playbook_on_start(self, playbook):
+        if self._display.verbosity > 3:
+            if self._options is not None:
+                for option in dir(self._options):
+                    if option.startswith('_') or option in ['read_file', 'ensure_value', 'read_module']:
+                        continue
+                    val = getattr(self._options, option)
+                    if val:
+                        self._display.vvvv('{}: {}'.format(option, val))
+
     def v2_playbook_on_task_start(self, task, is_conditional):
         args = ''
         if not task.no_log and C.DISPLAY_ARGS_TO_STDOUT:
