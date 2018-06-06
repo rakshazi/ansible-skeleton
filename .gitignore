@@ -1,3 +1,4 @@
+playbooks/skeleton-test.yml
 .vault
 tmp
 !tmp/.gitkeep

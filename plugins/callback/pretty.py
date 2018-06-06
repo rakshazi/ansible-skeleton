@@ -2,14 +2,12 @@ from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
 DOCUMENTATION = '''
-    callback: debug
+    callback: pretty
     type: stdout
-    short_description: formated stdout/stderr display
+    short_description: prettified unixy callback
     description:
-      - Use this callback to sort though extensive debug output
-    version_added: "2.4"
-    extends_documentation_fragment:
-      - default_callback
+      - Yet another prettified callback
+    version_added: "2.5"
     requirements:
       - set as stdout in configuration
 '''
@@ -37,7 +35,7 @@ class CallbackModule(CallbackModule_unixy):  # pylint: disable=too-few-public-me
             args = u', '.join(u'%s=%s' % a for a in task.args.items())
             args = u' %s' % args
 
-        self._display.display("➤ {}... {}".format(task.get_name().strip(), args))
+        self._display.display("\033[1m\033[96m➤ {}... {}\033[0m".format(task.get_name().strip(), args))
 
     def _process_result_output(self, result, msg):
         host = result._host.get_name()
