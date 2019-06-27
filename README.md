@@ -1,4 +1,4 @@
-# Ansible
+# Ansible [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/rakshazi/donate)
 
 Ansible skeleton for new projects
 
